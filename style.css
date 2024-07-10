@@ -426,7 +426,7 @@ a h1 {
 }
 
 .card_container {
-  height: 40rem;
+  height: 42rem;
   padding: 2.5rem;
   text-align: center;
   color: white;
@@ -434,21 +434,21 @@ a h1 {
 
 .card .instruction {
   background-image: linear-gradient(#2a537691, #2a537691),
-    url(./img/IMG_14721.JPG);
+    url("img/IMG_14721.JPG");
   background-size: cover;
   background-position: bottom;
 }
 
 .card .resources {
   background-image: linear-gradient(#2a537691, #2a537691),
-    url(./img/IMG_E1440.JPG);
+    url("img/IMG_E1440.JPG");
   background-size: cover;
   background-position: center;
 }
 
 .card .leadership {
   background-image: linear-gradient(#2a537691, #2a537691),
-    url(./img/IMG_1437.JPG);
+    url("img/IMG_1437.JPG");
   background-size: cover;
   background-position: top;
 }
