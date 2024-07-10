@@ -434,21 +434,21 @@ a h1 {
 
 .card .instruction {
   background-image: linear-gradient(#2a537691, #2a537691),
-    url(./img/IMG_14721.jpg);
+    url(./img/IMG_14721.JPG);
   background-size: cover;
   background-position: bottom;
 }
 
 .card .resources {
   background-image: linear-gradient(#2a537691, #2a537691),
-    url(./img/IMG_E1440.jpg);
+    url(./img/IMG_E1440.JPG);
   background-size: cover;
   background-position: center;
 }
 
 .card .leadership {
   background-image: linear-gradient(#2a537691, #2a537691),
-    url(./img/IMG_1437.jpg);
+    url(./img/IMG_1437.JPG);
   background-size: cover;
   background-position: top;
 }
