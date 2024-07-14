@@ -1,23 +1,7 @@
 let slideIndex = -1;
 let autoSlide;
 
-// Initialize slides and dots
-// initializeSlidesAndDots();
-
-// Set up the automatic slide change
 startAutoSlide();
-
-// function initializeSlidesAndDots() {
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots_container = document.querySelector(".dots_container");
-
-//   for (let i = 0; i < slides.length; i++) {
-//     let dot = document.createElement("span");
-//     dot.className = "dot";
-//     dot.onclick = () => currentSlide(i + 1);
-//     dots_container.appendChild(dot);
-//   }
-// }
 
 let show_dots = false;
 let dots_container = document.querySelector(".dots_container");
@@ -75,28 +59,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// -----------------------------------------------------------------------------
-
-//Sticky Navigation
-// const header = document.querySelector('.header');
-// const navHeight = nav.getBoundingClientRect().height;
-
-// const stickyNav = function (entries) {
-//   const [entry] = entries;
-//   // console.log(entry);
-
-//   if (!entry.isIntersecting) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// };
-
-// const headerObserver = new IntersectionObserver(stickyNav, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${navHeight}px`,
-// });
-
-// headerObserver.observe(header);
-
 window.addEventListener("scroll", function () {
   var navbar = document.getElementById("navbar");
   // var sticky = navbar.offsetTop;
@@ -126,5 +88,63 @@ function closeSearchBar() {
   input_container.style.transform = "translateY(-100%)";
 }
 
-const x_mark = document.querySelector(".x-mark-svg");
-x_mark.addEventListener("click", closeSearchBar);
+const x_mark_svg = document.querySelector(".x-mark-svg");
+x_mark_svg.addEventListener("click", closeSearchBar);
+
+const angle_icons = document.querySelectorAll(".angle-icons");
+const mobile_nav_dropdown_menu = document.querySelectorAll(
+  ".mobile_nav-dropdown-menu"
+);
+// const angle_right = document.getElementsByClassName(".angle-right");
+// const angle_down = document.getElementsByClassName(".angle-down");
+
+angle_icons.forEach((icon) => {
+  icon.addEventListener("click", () => handle_icon_display(icon));
+});
+
+function handle_icon_display(icon) {
+  clearDropdown(icon);
+  icon.querySelector(".angle-right").classList.toggle("active-icon");
+  icon.querySelector(".angle-down").classList.toggle("active-icon");
+
+  icon
+    .closest(".mobile_nav-box")
+    .querySelector(".mobile_nav-dropdown-menu")
+    .classList.toggle("drop");
+}
+
+function clearDropdown(icon) {
+  const mobile_nav_box = icon.closest(".mobile_nav-box");
+  const dropMenu = icon
+    .closest(".mobile_nav-box")
+    .querySelector(".mobile_nav-dropdown-menu");
+  mobile_nav_dropdown_menu.forEach((item) => {
+    if (dropMenu === item) return;
+    item.classList.remove("drop");
+    const angle_icons = item
+      .closest(".mobile_nav-box")
+      .querySelector(".angle-icons");
+    angle_icons.querySelector(".angle-right").classList.add("active-icon");
+    angle_icons.querySelector(".angle-down").classList.remove("active-icon");
+  });
+}
+
+const mobile_nav_svg = document.querySelector(".mobile-nav-svg");
+const body = document.querySelector("body");
+const mobile_nav__links = document.querySelector(".mobile_nav--links");
+const container = document.querySelector(".container");
+const menu_svg = document.querySelector(".menu-svg");
+const x_mark = document.querySelector(".x-mark");
+
+mobile_nav_svg.addEventListener("click", function () {
+  // body.classList.toggle("move-left");
+  // mobile_nav__links.style.transform = "translateX(0)";
+  mobile_nav__links.classList.toggle("moveto-original");
+  // body.style.marginLeft = "-28rem";
+  // container.style.transform = "translateX(-28rem)";
+  container.classList.toggle("move-left");
+  menu_svg.classList.toggle("active-icon");
+  x_mark.classList.toggle("active-icon");
+  // navbar.style.display = "none";
+  // nav_move;
+});
