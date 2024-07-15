@@ -589,7 +589,9 @@ a h1 {
   transition: 0.4s ease-out;
 }
 
-.features a:hover {
+.features a:hover,
+.features a:active,
+.features a:focus {
   background-color: #4a8fd0;
 }
 
@@ -703,13 +705,17 @@ a h1 {
 
 /* Hover Effect */
 .animate-border:hover::before,
-.animate-border:hover::after {
+.animate-border:hover::after,
+.animate-border:active::before,
+.animate-border:focus:after {
   left: 0;
   width: 100%;
 }
 
 .animate-border:hover span::before,
-.animate-border:hover span::after {
+.animate-border:hover span::after,
+.animate-border:active span::before,
+.animate-border:focus span::after {
   top: 0;
   height: 100%;
 }
