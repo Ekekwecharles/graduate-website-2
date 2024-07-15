@@ -706,16 +706,14 @@ a h1 {
 /* Hover Effect */
 .animate-border:hover::before,
 .animate-border:hover::after,
-.animate-border:active::before,
-.animate-border:focus:after {
+.animate-border:active::before {
   left: 0;
   width: 100%;
 }
 
 .animate-border:hover span::before,
 .animate-border:hover span::after,
-.animate-border:active span::before,
-.animate-border:focus span::after {
+.animate-border:active span::before {
   top: 0;
   height: 100%;
 }
@@ -729,9 +727,16 @@ a h1 {
   transform: translateY(0);
 }
 
-.search_nothing_found {
-  margin: 15rem 10rem 4rem;
-  font-size: 2rem;
+.animate-border.activate::before,
+.animate-border.activate::after {
+  left: 0;
+  width: 100%;
+}
+
+.animate-border.activate span::before,
+.animate-border.activate span::after {
+  top: 0;
+  height: 100%;
 }
 
 .result_section {
@@ -824,4 +829,9 @@ footer .designer {
 
 footer .designer a {
   color: white;
+}
+
+.search_nothing_found {
+  margin: 15rem 10rem 4rem;
+  font-size: 2rem;
 }

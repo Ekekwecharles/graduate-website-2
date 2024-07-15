@@ -148,3 +148,20 @@ mobile_nav_svg.addEventListener("click", function () {
   // navbar.style.display = "none";
   // nav_move;
 });
+
+// mobile touch
+
+document.querySelectorAll(".animate-border").forEach((item) => {
+  item.addEventListener("touchstart", () => {
+    item.classList.add("activate");
+  });
+  item.addEventListener("touchend", () => {
+    item.classList.remove("activate");
+  });
+  item.addEventListener("mousedown", () => {
+    item.classList.add("activate");
+  });
+  item.addEventListener("mouseup", () => {
+    item.classList.remove("activate");
+  });
+});
