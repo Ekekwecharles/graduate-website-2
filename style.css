@@ -850,6 +850,8 @@ footer .designer a {
   height: 100vh;
 }
 
-* {
-  /* border: 1px solid red; */
+.body_search {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
