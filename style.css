@@ -48,7 +48,8 @@ body {
 }
 
 .input_container input {
-  width: 35rem;
+  /* width: 35rem; */
+  width: 60%;
   border: none;
   background-color: transparent;
   border-bottom: 1.3px solid white;
@@ -832,6 +833,23 @@ footer .designer a {
 }
 
 .search_nothing_found {
-  margin: 15rem 10rem 4rem;
+  /* margin: 15rem 10rem 4rem; */
+  /* margin: 1vh 1vh 1vh; */
+  /* padding-top: 30%; */
+  padding-top: 10vw;
+  /* padding-left: 15%; */
+  padding-left: 5vw;
   font-size: 2rem;
+}
+
+.searchPage_flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  overflow: hidden;
+  height: 100vh;
+}
+
+* {
+  /* border: 1px solid red; */
 }
