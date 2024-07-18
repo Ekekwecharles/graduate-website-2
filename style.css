@@ -840,6 +840,7 @@ footer .designer a {
   /* padding-left: 15%; */
   padding-left: 5vw;
   font-size: 2rem;
+  border: 2px solid red;
 }
 
 .searchPage_flex {
@@ -847,19 +848,24 @@ footer .designer a {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   overflow: hidden; */
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
 .body_search {
   height: 100vh;
-  width: 100%;
+  /* width: 100%;
   overflow: hidden;
   position: relative;
+  border: 2px solid yellow; */
 }
 
 .searchPage_flex footer {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  border: 2px solid blue; */
+  margin-top: auto;
 }
