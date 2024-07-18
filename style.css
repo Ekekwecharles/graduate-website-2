@@ -48,8 +48,8 @@ body {
 }
 
 .input_container input {
-  /* width: 35rem; */
-  width: 60%;
+  width: 35rem;
+  /* width: 60%; */
   border: none;
   background-color: transparent;
   border-bottom: 1.3px solid white;

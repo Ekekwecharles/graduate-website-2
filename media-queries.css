@@ -99,14 +99,14 @@
   }
 
   .input_container input {
-    width: 80%;
+    width: 60%;
   }
 }
 
 /*400px */
 @media only screen and (max-width: 25em) {
   .search_nothing_found {
-    padding-top: 30vw;
+    /* padding-top: 30vw; */
     padding-left: 10vw;
   }
 }
