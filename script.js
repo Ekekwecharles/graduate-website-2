@@ -60,17 +60,19 @@ document.addEventListener("keydown", function (event) {
 });
 
 window.addEventListener("scroll", function () {
-  var navbar = document.getElementById("navbar");
-  // var sticky = navbar.offsetTop;
-  var nav_links = this.document.querySelector(".nav_links");
-  var sticky = nav_links.offsetTop;
+  if (document.querySelector("#home-page")) {
+    var navbar = document.getElementById("navbar");
+    // var sticky = navbar.offsetTop;
+    var nav_links = document.querySelector(".nav_links");
+    var sticky = nav_links.offsetTop;
 
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky");
-    // nav_links.style.marginTop = "20px";
-  } else if (window.pageYOffset <= sticky) {
-    navbar.classList.remove("sticky");
-    // nav_links.style.marginTop = "0";
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky");
+      // nav_links.style.marginTop = "20px";
+    } else if (window.pageYOffset <= sticky) {
+      navbar.classList.remove("sticky");
+      // nav_links.style.marginTop = "0";
+    }
   }
 });
 

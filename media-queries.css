@@ -91,7 +91,7 @@
 @media only screen and (max-width: 32em) {
   .input_container {
     padding-left: 0;
-    padding-right: 2rem;
+    padding-right: 2%;
   }
 
   .search {
@@ -99,14 +99,20 @@
   }
 
   .input_container input {
-    width: 60%;
+    width: 29rem;
+    margin-right: 1.5rem;
+  }
+
+  .search_nothing_found {
+    padding-top: 50vw;
+    padding-left: 15vw;
   }
 }
 
 /*400px */
-@media only screen and (max-width: 25em) {
+/* @media only screen and (max-width: 25em) {
   .search_nothing_found {
-    /* padding-top: 30vw; */
+    padding-top: 50vw;
     padding-left: 10vw;
   }
-}
+} */

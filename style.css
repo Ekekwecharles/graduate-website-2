@@ -49,7 +49,6 @@ body {
 
 .input_container input {
   width: 35rem;
-  /* width: 60%; */
   border: none;
   background-color: transparent;
   border-bottom: 1.3px solid white;
@@ -840,7 +839,6 @@ footer .designer a {
   /* padding-left: 15%; */
   padding-left: 5vw;
   font-size: 2rem;
-  border: 2px solid red;
 }
 
 .searchPage_flex {
@@ -857,15 +855,13 @@ footer .designer a {
   height: 100vh;
   /* width: 100%;
   overflow: hidden;
-  position: relative;
-  border: 2px solid yellow; */
+  position: relative;*/
 }
 
 .searchPage_flex footer {
   /* position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
-  border: 2px solid blue; */
+  right: 0;*/
   margin-top: auto;
 }
